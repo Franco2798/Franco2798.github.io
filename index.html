@@ -3,140 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Franco Lorenzino | Portfolio</title>
+    <title>Franco Lorenzino Portfolio</title>
     <style>
         :root {
-            --primary-blue: #1a365d; /* Tu azul */
-            --accent-orange: #ed8936; /* Tu naranja */
-            --bg-light: #ffffff;
-            --text-dark: #333;
-            --section-bg: #f8f9fa;
+            --primary-blue: #1a365d; /* Azul Profundo */
+            --accent-orange: #ed8936; /* Naranja */
+            --text-color: #333;
         }
 
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: var(--text-dark);
             line-height: 1.6;
+            color: var(--text-color);
         }
 
-        /* Hero Section similar a Jerry */
-        .hero {
-            background-color: var(--primary-blue);
-            color: white;
-            padding: 100px 20px;
+        header {
+            background-color: white;
+            padding: 40px 20px;
             text-align: center;
-            border-bottom: 8px solid var(--accent-orange);
+            border-bottom: 1px solid #eee;
         }
 
-        .hero h1 { font-size: 3rem; margin: 0; }
-        .hero p { font-size: 1.2rem; margin: 10px 0; }
+        header h1 {
+            font-size: 3rem;
+            color: var(--primary-blue);
+            margin: 0;
+        }
 
-        .container { max-width: 800px; margin: auto; padding: 40px 20px; }
+        nav {
+            text-align: center;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            background: white;
+            border-bottom: 2px solid var(--primary-blue);
+            z-index: 1000;
+        }
 
-        /* Estilo de secciones de Jerry */
-        h2 { 
-            color: var(--primary-blue); 
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--primary-blue);
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: var(--accent-orange);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: var(--primary-blue);
             border-bottom: 2px solid var(--accent-orange);
-            padding-bottom: 10px;
+            padding-bottom: 5px;
             margin-top: 40px;
         }
 
-        .item { margin-bottom: 30px; }
-        .item-title { font-weight: bold; font-size: 1.2rem; color: var(--primary-blue); }
-        .item-subtitle { color: #666; font-style: italic; }
-        
-        /* Skills Tags */
-        .tag {
-            display: inline-block;
-            background: var(--primary-blue);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            margin: 5px 2px;
+        .item-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--primary-blue);
         }
 
-        a { color: var(--accent-orange); text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        .item-details {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
 
-        footer { text-align: center; padding: 40px; font-size: 0.9rem; color: #888; }
+        ul {
+            padding-left: 20px;
+        }
+
+        a {
+            color: var(--accent-orange);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.8rem;
+            border-top: 1px solid #eee;
+        }
     </style>
 </head>
 <body>
 
-<div class="hero">
-    <h1>Franco Lorenzino</h1>
-    <p>Welcome to my portfolio</p>
-    <p>📧 francolorenzino27@gmail.com | 📞 +1 (209) 279-8370</p>
-</div>
+    <header>
+        <h1>Franco Lorenzino</h1>
+        <p>Welcome to my portfolio</p>
+    </header>
 
-<div class="container">
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Argentine Data Science graduate student at University of the Pacific (Class of 2026). I specialize in AI-powered solutions and real-time data systems.</p>
-    </section>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#volunteer">Volunteer Experience</a>
+        <a href="#education">Education</a>
+        <a href="#work">Work Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-    <section id="volunteer">
-        <h2>Volunteer Experience</h2>
-        <div class="item">
-            <p><em>(Espacio disponible para tus experiencias de voluntariado)</em></p>
-        </div>
-    </section>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! My name is Franco Lorenzino. I am a Data Science graduate student at the <strong>University of the Pacific</strong> with a passion for solving complex problems and creating impactful solutions using technology. Welcome to my portfolio where you can learn more about my education, work experience, and projects.</p>
+        </section>
 
-    <section id="education">
-        <h2>Education</h2>
-        <div class="item">
-            <div class="item-title">Master of Science in Data Science</div>
-            <div class="item-subtitle">University of the Pacific | Expected May 2026</div>
-        </div>
-    </section>
+        <section id="volunteer">
+            <h2>Volunteer Experience</h2>
+            <p><em>Experience to be added...</em></p>
+        </section>
 
-    <section id="experience">
-        <h2>Work Experience</h2>
-        <div class="item">
-            <p><em>(Espacio para tu experiencia laboral o pasantías como la de Absentia)</em></p>
-        </div>
-    </section>
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <strong>Master of Science in Data Science</strong>, University of the Pacific | Expected May 2026
+                </li>
+            </ul>
+        </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        
-        <div class="item">
-            <div class="item-title">GoPark: AI-Powered Parking Detection</div>
-            <p>Research paper accepted for IntelliSys 2026, Amsterdam.</p>
-            <span class="tag">Python</span> <span class="tag">YOLOv8</span> <span class="tag">Deep Learning</span>
-        </div>
+        <section id="work">
+            <h2>Work Experience</h2>
+            <div class="item-title">Graduate Project Collaborator</div>
+            <div class="item-details">Absentia (Feb 2026 - Present)</div>
+            <ul>
+                <li>Collaborating on a final graduation project using company data for predictive analytics and business intelligence.</li>
+            </ul>
+        </section>
 
-        <div class="item">
-            <div class="item-title">Real-Time Inventory API</div>
-            <p>Centralized API for food delivery platforms.</p>
-            <span class="tag">Python</span> <span class="tag">APIs</span>
-        </div>
-    </section>
+        <section id="projects">
+            <h2>Work Projects</h2>
+            <div class="item-title">GoPark: AI-Powered Parking Recommendation System</div>
+            <p><strong>Technology:</strong> Python, FastAPI, PyTorch, YOLOv8, OpenCV, PostgreSQL, Docker.</p>
+            <p><strong>Description:</strong> Developed an AI-powered application that uses computer vision to detect parking occupancy in real-time. Features a two-stage computer vision pipeline and an intelligent recommendation engine. Research paper accepted at <strong>IntelliSys 2026, Amsterdam</strong>.</p>
+            <p><a href="https://github.com/Franco2798/Parking_lot_detection">[View Project]</a></p>
+            
+            <hr>
+            
+            <div class="item-title">Real-Time Food Delivery Inventory API</div>
+            <p><strong>Technology:</strong> Python, API Integration, Real-time Data.</p>
+            <p><strong>Description:</strong> Created a centralized API system for food delivery apps to manage restaurant inventory in real-time.</p>
+        </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <div>
-            <span class="tag">Python</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Machine Learning</span>
-            <span class="tag">Data Analysis</span>
-        </div>
-    </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Programming:</strong> Python, SQL.</li>
+                <li><strong>Technologies:</strong> PyTorch, YOLOv8, FastAPI, Pandas, NumPy, Scikit-learn.</li>
+                <li><strong>Tools:</strong> Git, Docker, Jupyter.</li>
+            </ul>
+        </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to reach out via <a href="https://www.linkedin.com/in/franco-lorenzino-05721b209/">LinkedIn</a> or <a href="https://github.com/Franco2798">GitHub</a>.</p>
-    </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <ul>
+                <li>Email: <a href="mailto:francolorenzino27@gmail.com">francolorenzino27@gmail.com</a></li>
+                <li>Phone: +1 (209) 279-8370</li>
+                <li>GitHub: <a href="https://github.com/Franco2798">github.com/Franco2798</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/franco-lorenzino-05721b209/">linkedin.com/in/franco-lorenzino</a></li>
+            </ul>
+        </section>
+    </div>
 
-</div>
-
-<footer>
-    © 2026 Franco Lorenzino. All rights reserved.
-</footer>
+    <footer>
+        © 2026 Franco Lorenzino. All rights reserved.
+    </footer>
 
 </body>
 </html>

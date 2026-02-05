@@ -3,113 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Franco Lorenzino | Data Scientist</title>
+    <title>Franco Lorenzino | Portfolio</title>
     <style>
         :root {
-            --primary-blue: #1a365d; /* Azul profesional */
-            --accent-orange: #ed8936; /* Naranja para resaltar */
-            --bg-light: #f7fafc;
-            --text-dark: #2d3748;
+            --primary-blue: #1a365d; /* Tu azul */
+            --accent-orange: #ed8936; /* Tu naranja */
+            --bg-light: #ffffff;
+            --text-dark: #333;
+            --section-bg: #f8f9fa;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
-            background-color: var(--bg-light);
+            padding: 0;
             color: var(--text-dark);
+            line-height: 1.6;
         }
 
-        header {
+        /* Hero Section similar a Jerry */
+        .hero {
             background-color: var(--primary-blue);
             color: white;
-            padding: 3rem 1rem;
+            padding: 100px 20px;
             text-align: center;
-            border-bottom: 5px solid var(--accent-orange);
+            border-bottom: 8px solid var(--accent-orange);
         }
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 2rem;
+        .hero h1 { font-size: 3rem; margin: 0; }
+        .hero p { font-size: 1.2rem; margin: 10px 0; }
+
+        .container { max-width: 800px; margin: auto; padding: 40px 20px; }
+
+        /* Estilo de secciones de Jerry */
+        h2 { 
+            color: var(--primary-blue); 
+            border-bottom: 2px solid var(--accent-orange);
+            padding-bottom: 10px;
+            margin-top: 40px;
         }
 
-        h1 { margin: 0; font-size: 2.5rem; }
-        h2 { color: var(--primary-blue); border-bottom: 2px solid var(--accent-orange); display: inline-block; padding-bottom: 5px; }
-
-        .section { margin-bottom: 3rem; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-
-        .project-card {
-            border-left: 4px solid var(--accent-orange);
-            padding: 1rem;
-            margin: 1rem 0;
-            background: #fffaf5;
-        }
-
+        .item { margin-bottom: 30px; }
+        .item-title { font-weight: bold; font-size: 1.2rem; color: var(--primary-blue); }
+        .item-subtitle { color: #666; font-style: italic; }
+        
+        /* Skills Tags */
         .tag {
+            display: inline-block;
             background: var(--primary-blue);
             color: white;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            margin-right: 5px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 5px 2px;
         }
 
-        a { color: var(--accent-orange); text-decoration: none; font-weight: bold; }
+        a { color: var(--accent-orange); text-decoration: none; }
         a:hover { text-decoration: underline; }
 
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
+        footer { text-align: center; padding: 40px; font-size: 0.9rem; color: #888; }
     </style>
 </head>
 <body>
 
-<header>
+<div class="hero">
     <h1>Franco Lorenzino</h1>
-    <p>MS Data Science Student @ University of the Pacific | Class of 2026</p>
-    <div class="contact-info">
-        <span>📧 francolorenzino27@gmail.com</span>
-        <span>📞 +1 (209) 279-8370</span>
-        <a href="https://www.linkedin.com/in/franco-lorenzino-05721b209/" style="color: white;">LinkedIn</a>
-        <a href="https://github.com/Franco2798" style="color: white;">GitHub</a>
-    </div>
-</header>
-
-<div class="container">
-    <section class="section">
-        <h2>About Me</h2>
-        <p>I am an Argentine Data Science graduate student currently based in the USA. I am passionate about building data-driven solutions and intelligent systems. Currently, I am focused on my Master's at <strong>University of the Pacific</strong> and developing projects that bridge the gap between AI and real-world applications.</p>
-    </section>
-
-    <section class="section">
-        <h2>Featured Projects</h2>
-        
-        <div class="project-card">
-            <h3>GoPark: AI-Powered Parking Recommendation System</h3>
-            <p><strong>Research Paper accepted at IntelliSys 2026, Amsterdam.</strong></p>
-            <p>An intelligent system designed to optimize urban mobility by predicting parking availability using Deep Learning and real-time data analysis.</p>
-            <div>
-                <span class="tag">Python</span><span class="tag">YOLOv8</span><span class="tag">FastAPI</span><span class="tag">PyTorch</span>
-            </div>
-            <p><a href="https://github.com/Franco2798/Parking_lot_detection">View Repository →</a></p>
-        </div>
-
-        </section>
-
-    <section class="section">
-        <h2>Education</h2>
-        <p><strong>Master of Science in Data Science</strong><br>
-        University of the Pacific | Expected May 2026</p>
-    </section>
+    <p>Welcome to my portfolio</p>
+    <p>📧 francolorenzino27@gmail.com | 📞 +1 (209) 279-8370</p>
 </div>
 
-<footer style="text-align: center; padding: 2rem; color: #718096;">
-    © 2026 Franco Lorenzino. Built with GitHub Pages.
+<div class="container">
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Argentine Data Science graduate student at University of the Pacific (Class of 2026). I specialize in AI-powered solutions and real-time data systems.</p>
+    </section>
+
+    <section id="volunteer">
+        <h2>Volunteer Experience</h2>
+        <div class="item">
+            <p><em>(Espacio disponible para tus experiencias de voluntariado)</em></p>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="item">
+            <div class="item-title">Master of Science in Data Science</div>
+            <div class="item-subtitle">University of the Pacific | Expected May 2026</div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Work Experience</h2>
+        <div class="item">
+            <p><em>(Espacio para tu experiencia laboral o pasantías como la de Absentia)</em></p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        
+        <div class="item">
+            <div class="item-title">GoPark: AI-Powered Parking Detection</div>
+            <p>Research paper accepted for IntelliSys 2026, Amsterdam.</p>
+            <span class="tag">Python</span> <span class="tag">YOLOv8</span> <span class="tag">Deep Learning</span>
+        </div>
+
+        <div class="item">
+            <div class="item-title">Real-Time Inventory API</div>
+            <p>Centralized API for food delivery platforms.</p>
+            <span class="tag">Python</span> <span class="tag">APIs</span>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div>
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Data Analysis</span>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out via <a href="https://www.linkedin.com/in/franco-lorenzino-05721b209/">LinkedIn</a> or <a href="https://github.com/Franco2798">GitHub</a>.</p>
+    </section>
+
+</div>
+
+<footer>
+    © 2026 Franco Lorenzino. All rights reserved.
 </footer>
 
 </body>

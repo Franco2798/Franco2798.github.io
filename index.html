@@ -3,184 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Franco Lorenzino Portfolio</title>
+    <title>Franco Lorenzino | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-blue: #1a365d; /* Azul Profundo */
-            --accent-orange: #ed8936; /* Naranja */
-            --text-color: #333;
+            --primary-blue: #1a365d;
+            --accent-orange: #ed8936;
+            --bg-light: #f7fafc;
+            --text-dark: #2d3748;
+            --white: #ffffff;
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: var(--text-color);
+            background-color: var(--bg-light);
+            color: var(--text-dark);
         }
 
         header {
-            background-color: white;
+            background-color: var(--primary-blue);
+            color: var(--white);
             padding: 40px 20px;
             text-align: center;
-            border-bottom: 1px solid #eee;
+            border-bottom: 5px solid var(--accent-orange);
         }
 
-        header h1 {
-            font-size: 3rem;
-            color: var(--primary-blue);
-            margin: 0;
+        header h1 { margin: 0; font-size: 2.5rem; }
+
+        .tabs {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
-        nav {
-            text-align: center;
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            background: white;
-            border-bottom: 2px solid var(--primary-blue);
-            z-index: 1000;
+        .tabs button {
+            background: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+            border-radius: 5px;
         }
 
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: var(--primary-blue);
-            font-weight: bold;
+        .tabs button.active, .tabs button:hover {
+            background-color: var(--accent-orange);
+            border-color: var(--accent-orange);
         }
 
-        nav a:hover {
-            color: var(--accent-orange);
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            min-height: 400px;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-        }
+        .content-section { display: none; }
+        .content-section.active { display: block; }
 
         h2 {
             color: var(--primary-blue);
             border-bottom: 2px solid var(--accent-orange);
-            padding-bottom: 5px;
-            margin-top: 40px;
+            display: inline-block;
+            margin-bottom: 20px;
         }
 
-        .item-title {
-            font-weight: bold;
-            font-size: 1.2rem;
-            color: var(--primary-blue);
-        }
-
-        .item-details {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        a {
-            color: var(--accent-orange);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            font-size: 0.8rem;
-            border-top: 1px solid #eee;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Franco Lorenzino</h1>
-        <p>Welcome to my portfolio</p>
-    </header>
-
-    <nav>
-        <a href="#about">About</a>
-        <a href="#volunteer">Volunteer Experience</a>
-        <a href="#education">Education</a>
-        <a href="#work">Work Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hello! My name is Franco Lorenzino. I am a Data Science graduate student at the <strong>University of the Pacific</strong> with a passion for solving complex problems and creating impactful solutions using technology. Welcome to my portfolio where you can learn more about my education, work experience, and projects.</p>
-        </section>
-
-        <section id="volunteer">
-            <h2>Volunteer Experience</h2>
-            <p><em>Experience to be added...</em></p>
-        </section>
-
-        <section id="education">
-            <h2>Education</h2>
-            <ul>
-                <li>
-                    <strong>Master of Science in Data Science</strong>, University of the Pacific | Expected May 2026
-                </li>
-            </ul>
-        </section>
-
-        <section id="work">
-            <h2>Work Experience</h2>
-            <div class="item-title">Graduate Project Collaborator</div>
-            <div class="item-details">Absentia (Feb 2026 - Present)</div>
-            <ul>
-                <li>Collaborating on a final graduation project using company data for predictive analytics and business intelligence.</li>
-            </ul>
-        </section>
-
-        <section id="projects">
-            <h2>Work Projects</h2>
-            <div class="item-title">GoPark: AI-Powered Parking Recommendation System</div>
-            <p><strong>Technology:</strong> Python, FastAPI, PyTorch, YOLOv8, OpenCV, PostgreSQL, Docker.</p>
-            <p><strong>Description:</strong> Developed an AI-powered application that uses computer vision to detect parking occupancy in real-time. Features a two-stage computer vision pipeline and an intelligent recommendation engine. Research paper accepted at <strong>IntelliSys 2026, Amsterdam</strong>.</p>
-            <p><a href="https://github.com/Franco2798/Parking_lot_detection">[View Project]</a></p>
-            
-            <hr>
-            
-            <div class="item-title">Real-Time Food Delivery Inventory API</div>
-            <p><strong>Technology:</strong> Python, API Integration, Real-time Data.</p>
-            <p><strong>Description:</strong> Created a centralized API system for food delivery apps to manage restaurant inventory in real-time.</p>
-        </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>Programming:</strong> Python, SQL.</li>
-                <li><strong>Technologies:</strong> PyTorch, YOLOv8, FastAPI, Pandas, NumPy, Scikit-learn.</li>
-                <li><strong>Tools:</strong> Git, Docker, Jupyter.</li>
-            </ul>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <ul>
-                <li>Email: <a href="mailto:francolorenzino27@gmail.com">francolorenzino27@gmail.com</a></li>
-                <li>Phone: +1 (209) 279-8370</li>
-                <li>GitHub: <a href="https://github.com/Franco2798">github.com/Franco2798</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/franco-lorenzino-05721b209/">linkedin.com/in/franco-lorenzino</a></li>
-            </ul>
-        </section>
-    </div>
-
-    <footer>
-        © 2026 Franco Lorenzino. All rights reserved.
-    </footer>
-
-</body>
-</html>
+        .project-

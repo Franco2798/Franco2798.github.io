@@ -8,130 +8,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-blue: #1a365d;
-            --secondary-blue: #224477;
-            --accent-orange: #ed8936;
-            --white: #ffffff;
-            --text-light: #f7fafc;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            background-color: var(--primary-blue);
-            color: var(--text-light);
-        }
-
-        header {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            padding: 40px 20px;
-            text-align: center;
-            border-bottom: 5px solid var(--accent-orange);
-        }
-
-        header h1 { margin: 0; font-size: 2.5rem; }
-
-        .tabs {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .tabs button {
-            background: transparent;
-            border: 2px solid var(--white);
-            color: var(--white);
-            padding: 10px 20px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: 0.3s;
-            border-radius: 5px;
-        }
-
-        .tabs button.active, .tabs button:hover {
-            background-color: var(--accent-orange);
-            border-color: var(--accent-orange);
-        }
-
-        main {
-            max-width: 900px;
-            margin: 40px auto;
-            background: var(--secondary-blue);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            min-height: 400px;
-        }
-
-        .content-section { display: none; }
-        .content-section.active { display: block; }
-
-        h2 {
-            color: var(--white);
-            border-bottom: 2px solid var(--accent-orange);
-            text-align: center; /* ESTO CENTRA EL TEXTO */
-            margin: 0 auto 30px auto; /* CENTRA EL BLOQUE DEL TÍTULO */
-            padding-bottom: 10px;
-            max-width: fit-content; /* HACE QUE EL BORDE SOLO OCUPE EL ANCHO DEL TEXTO */
-        }
-
-        .project-button {
-            display: inline-block;
-            background-color: var(--accent-orange);
-            color: var(--white);
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: var(--white);
-            font-size: 0.9rem;
-        }
-
-        ul { list-style: none; padding: 0; }
-        li { margin-bottom: 15px; }
-        i { color: var(--accent-orange); margin-right: 10px; }
-        
-        a { color: var(--accent-orange); text-decoration: none; font-weight: bold; }
-        a:hover { color: var(--white); text-decoration: underline; }
-
-        strong { color: var(--white); }
-    </style>
-    <script>
-        function switchTab(tabId) {
-            document.querySelectorAll('.content-section').forEach(section => {
-                section.classList.remove('active');
-            });
-            document.querySelectorAll('.tabs button').forEach(button => {
-                button.classList.remove('active');
-            });
-            document.getElementById(tabId).classList.add('active');
-            event.currentTarget.classList.add('active');
-        }
-    </script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Franco Lorenzino</h1>
-        <p>Welcome to my portfolio</p>
+        <p>Data Science Graduate Student @ University of the Pacific</p>
         <div class="tabs">
-            <button class="active" onclick="switchTab('about')">About</button>
-            <button onclick="switchTab('volunteer')">Volunteer Experience</button>
-            <button onclick="switchTab('education')">Education</button>
-            <button onclick="switchTab('work')">Work Experience</button>
-            <button onclick="switchTab('projects')">Projects</button>
-            <button onclick="switchTab('skills')">Skills</button>
-            <button onclick="switchTab('contact')">Contact</button>
+            <button class="tab-btn active" data-tab="about">About</button>
+            <button class="tab-btn" data-tab="volunteer">Volunteer Experience</button>
+            <button class="tab-btn" data-tab="education">Education</button>
+            <button class="tab-btn" data-tab="work">Work Experience</button>
+            <button class="tab-btn" data-tab="projects">Projects</button>
+            <button class="tab-btn" data-tab="skills">Skills</button>
+            <button class="tab-btn" data-tab="contact">Contact</button>
         </div>
     </header>
 
@@ -144,35 +35,44 @@
 
         <section id="volunteer" class="content-section">
             <h2>Volunteer Experience</h2>
-            <p>Contenido pendiente...</p>
+            <div class="card-container">
+                </div>
         </section>
 
         <section id="education" class="content-section">
             <h2>Education</h2>
-            <ul>
-                <li><i class="fas fa-graduation-cap"></i><strong>Master of Science in Data Science</strong>, University of the Pacific | Expected May 2026</li>
-                <li><i class="fas fa-graduation-cap"></i><strong>Licenciatura en Informática</strong>, Universidad Nacional de La Plata</li>
-            </ul>
+            <div class="card-container">
+                <div class="work-experience">
+                    <h3>Master of Science in Data Science</h3>
+                    <p>University of the Pacific | Expected May 2026</p>
+                </div>
+                <div class="work-experience">
+                    <h3>[Tu Título anterior]</h3>
+                    <p>National University of La Plata</p>
+                </div>
+            </div>
         </section>
 
         <section id="work" class="content-section">
             <h2>Work Experience</h2>
-            <p>Contenido pendiente...</p>
+            <div class="card-container">
+                </div>
         </section>
 
         <section id="projects" class="content-section">
             <h2>Projects</h2>
-            <p>Contenido pendiente...</p>
+            <div class="card-container">
+                </div>
         </section>
 
         <section id="skills" class="content-section">
             <h2>Skills</h2>
-            <p>Contenido pendiente...</p>
+            <div class="work-experience">
+                </div>
         </section>
 
         <section id="contact" class="content-section">
             <h2>Contact</h2>
-            <p>Feel free to reach out to me through the following channels:</p>
             <ul>
                 <li><i class="fas fa-envelope"></i>Email: <a href="mailto:francolorenzino27@gmail.com">francolorenzino27@gmail.com</a></li>
                 <li><i class="fas fa-phone"></i>Phone: +1 (209) 279-8370</li>

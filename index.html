@@ -78,4 +78,106 @@
             margin-bottom: 20px;
         }
 
-        .project-
+        .project-button {
+            display: inline-block;
+            background-color: var(--accent-orange);
+            color: var(--white);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+        }
+
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 15px; }
+        i { color: var(--accent-orange); margin-right: 10px; }
+        a { color: var(--primary-blue); text-decoration: none; font-weight: bold; }
+    </style>
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.querySelectorAll('.tabs button').forEach(button => {
+                button.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Franco Lorenzino</h1>
+        <p>Welcome to my portfolio</p>
+        <div class="tabs">
+            <button class="active" onclick="switchTab('about')">About</button>
+            <button onclick="switchTab('volunteer')">Volunteer Experience</button>
+            <button onclick="switchTab('education')">Education</button>
+            <button onclick="switchTab('work')">Work Experience</button>
+            <button onclick="switchTab('projects')">Projects</button>
+            <button onclick="switchTab('skills')">Skills</button>
+            <button onclick="switchTab('contact')">Contact</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="content-section active">
+            <h2>About Me</h2>
+            <p>Argentine Data Science student currently based in the USA, pursuing a Master of Science at the University of the Pacific.</p>
+            <a href="Franco_Lorenzino_Resume.pdf" target="_blank" class="project-button">My Resume</a>
+        </section>
+
+        <section id="volunteer" class="content-section">
+            <h2>Volunteer Experience</h2>
+            <p>Contenido pendiente...</p>
+        </section>
+
+        <section id="education" class="content-section">
+            <h2>Education</h2>
+            <ul>
+                <li><i class="fas fa-graduation-cap"></i><strong>Master of Science in Data Science</strong>, University of the Pacific | Expected May 2026</li>
+                <li><i class="fas fa-graduation-cap"></i><strong>[Tu Título anterior]</strong>, National University of La Plata | [Fecha]</li>
+            </ul>
+        </section>
+
+        <section id="work" class="content-section">
+            <h2>Work Experience</h2>
+            <p>Contenido pendiente...</p>
+        </section>
+
+        <section id="projects" class="content-section">
+            <h2>Projects</h2>
+            <p>Contenido pendiente...</p>
+        </section>
+
+        <section id="skills" class="content-section">
+            <h2>Skills</h2>
+            <p>Contenido pendiente...</p>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h2>Contact</h2>
+            <p>Feel free to reach out to me through the following channels:</p>
+            <ul>
+                <li><i class="fas fa-envelope"></i>Email: <a href="mailto:francolorenzino27@gmail.com">francolorenzino27@gmail.com</a></li>
+                <li><i class="fas fa-phone"></i>Phone: +1 (209) 279-8370</li>
+                <li><i class="fab fa-github"></i>GitHub: <a href="https://github.com/Franco2798" target="_blank">github.com/Franco2798</a></li>
+                <li><i class="fab fa-linkedin"></i>LinkedIn: <a href="https://www.linkedin.com/in/franco-lorenzino-05721b209/" target="_blank">linkedin.com/in/franco-lorenzino</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Franco Lorenzino. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,7 +1,7 @@
 :root {
     /* --- Knicks Theme Colors --- */
     --bg-color: #006BB6;        
-    --primary-color: #006BB6;   
+    --primary-color: #051c2c;   
     --secondary-color: #006BB6; 
     --accent-color: #F58426;    
     --font-color: #F2F2F2;      
@@ -26,7 +26,7 @@ header {
     top: 0;
     z-index: 1000;
     padding: 1.5rem 2rem;
-    background: rgba(22, 33, 62, 0.9);
+    background: var(--bg-color);
     backdrop-filter: blur(10px);
     border-bottom: 3px solid var(--accent-color);
     text-align: center;

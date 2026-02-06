@@ -1,10 +1,19 @@
 :root {
+    /* --- Knicks Theme Colors --- */
+    --bg-color: #051c2c;        
+    --primary-color: #006BB6;   
+    --secondary-color: #004d82; 
+    --accent-color: #F58426;    
+    --font-color: #F2F2F2;      
+    --font-family: 'Poppins', sans-serif;
+
+    /* --- Previous Colors (Comentados por si me arrepiento) ---
     --bg-color: #1a1a2e;
     --primary-color: #16213e;
     --secondary-color: #0f3460;
-    --accent-color: #ed8936; /* NARANJA en lugar de rosa */
+    --accent-color: #ed8936;
     --font-color: #dcdcdc;
-    --font-family: 'Poppins', sans-serif;
+    ---------------------------------------------------------- */
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }

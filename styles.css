@@ -1,10 +1,10 @@
 :root {
     /* --- Knicks Theme Colors --- */
-    --bg-color: #051c2c;        
-    --primary-color: #051c2c;   
-    --secondary-color: #006BB6; 
+    --bg-color: #1a1a2e;        
+    --primary-color: #16213e;   
+    --secondary-color: #0f3460; 
     --accent-color: #F58426;    
-    --font-color: #F2F2F2;      
+    --font-color: #dcdcdc;      
     --font-family: 'Poppins', sans-serif;
 }
 
@@ -13,7 +13,7 @@ html { scroll-behavior: smooth; }
 
 body {
     font-family: var(--font-family);
-    background-color: var(--secondary-color);
+    background-color: var(--bg-color);
     color: var(--font-color);
     line-height: 1.6;
     display: flex;

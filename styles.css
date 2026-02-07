@@ -83,4 +83,71 @@ h2::after {
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    width:
+    width: 50px;
+    height: 3px;
+    background: var(--accent-color);
+}
+
+/* --- TARJETAS DE EXPERIENCIA (Volunteer, Work, Education) --- */
+.work-experience {
+    background: var(--primary-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 5px solid var(--accent-color);
+    margin-bottom: 1.5rem;
+    text-align: left; /* Mantiene el texto alineado a la izquierda dentro de la tarjeta */
+}
+
+.work-experience h3 { 
+    color: var(--accent-color); 
+    margin-bottom: 0.5rem; 
+}
+
+/* Espacio debajo del subtítulo (donde va la universidad/empresa y fechas) */
+.work-experience p {
+    margin-bottom: 1rem;
+}
+
+/* --- ESPACIADO DE LA LISTA DE LOGROS --- */
+.work-experience ul {
+    padding-left: 1.2rem;
+}
+
+.work-experience ul li {
+    margin-bottom: 1.2rem; /* Espaciado entre cada punto de la lista */
+}
+
+.work-experience ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* --- BOTÓN DE RESUME Y PROYECTOS --- */
+.project-button {
+    background: var(--accent-color);
+    color: #ffffff !important; /* Asegura que la letra sea blanca */
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    width: fit-content;
+    margin: 2rem auto;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.project-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(245, 132, 38, 0.4);
+}
+
+#contact i { color: var(--accent-color); margin-right: 1rem; }
+#contact a { color: var(--font-color); text-decoration: none; }
+#contact a:hover { color: var(--accent-color); }
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--primary-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

@@ -86,12 +86,8 @@ function nextPage() {
         currentProjPage++;
         showProjectPage(currentProjPage);
         
-        // Calculate dynamic scroll position to account for the sticky header
-        const projectsSection = document.getElementById('projects');
-        const headerHeight = document.querySelector('header').offsetHeight + 20; // 20px extra padding
-        const elementPosition = projectsSection.getBoundingClientRect().top + window.scrollY;
-        
-        window.scrollTo({ top: elementPosition - headerHeight, behavior: 'smooth' });
+        // Scroll to the absolute top of the page (matches tab behavior)
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 }
 
@@ -100,11 +96,7 @@ function prevPage() {
         currentProjPage--;
         showProjectPage(currentProjPage);
         
-        // Calculate dynamic scroll position to account for the sticky header
-        const projectsSection = document.getElementById('projects');
-        const headerHeight = document.querySelector('header').offsetHeight + 20; // 20px extra padding
-        const elementPosition = projectsSection.getBoundingClientRect().top + window.scrollY;
-        
-        window.scrollTo({ top: elementPosition - headerHeight, behavior: 'smooth' });
+        // Scroll to the absolute top of the page (matches tab behavior)
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 }

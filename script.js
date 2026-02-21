@@ -85,8 +85,13 @@ function nextPage() {
     if (currentProjPage < totalProjPages) {
         currentProjPage++;
         showProjectPage(currentProjPage);
-        // Smoothly scroll to the top of the projects section
-        document.getElementById('projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        
+        // Calculate dynamic scroll position to account for the sticky header
+        const projectsSection = document.getElementById('projects');
+        const headerHeight = document.querySelector('header').offsetHeight + 20; // 20px extra padding
+        const elementPosition = projectsSection.getBoundingClientRect().top + window.scrollY;
+        
+        window.scrollTo({ top: elementPosition - headerHeight, behavior: 'smooth' });
     }
 }
 
@@ -94,7 +99,12 @@ function prevPage() {
     if (currentProjPage > 1) {
         currentProjPage--;
         showProjectPage(currentProjPage);
-        // Smoothly scroll to the top of the projects section
-        document.getElementById('projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        
+        // Calculate dynamic scroll position to account for the sticky header
+        const projectsSection = document.getElementById('projects');
+        const headerHeight = document.querySelector('header').offsetHeight + 20; // 20px extra padding
+        const elementPosition = projectsSection.getBoundingClientRect().top + window.scrollY;
+        
+        window.scrollTo({ top: elementPosition - headerHeight, behavior: 'smooth' });
     }
 }
